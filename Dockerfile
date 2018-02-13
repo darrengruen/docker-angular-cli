@@ -1,4 +1,4 @@
-FROM node:9.3.0
+FROM node:9.3.0-alpine
 
 CMD ["ng"]
 
@@ -15,6 +15,9 @@ LABEL ${SCHEMA}.build-date=${BUILD_DATE} \
       ${SCHEMA}.vcs-ref=${GIT_SHA} \
       ${SCHEMA}.vendor="gruen" \
       ${SCHEMA}.name="angular-cli" \
+      ${SCHEMA}.vcs-url="https://github.com/darrengruen/docker-angular-cli" \
+      ${SCHEMA}.schema-version="1.0" \
+      ${SCHEMA}.docker.cmd.help="docker run $CONTAINER help" \
       ${SITE}.author="Darren Green <darren@gruen.site>" \
       ${SITE}.version="0.0.1"
 
